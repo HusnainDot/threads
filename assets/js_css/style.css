@@ -1,0 +1,45 @@
+
+
+.bg_main_black{
+  background-color: #101010;
+}
+
+* {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0px !important;
+}
+
+
+
+/* logian page and create new account */
+
+.login-input::placeholder{
+  color: rgb(200, 200, 200);
+}
+.login-input{
+  background: #1E1E1E !important;
+  outline: none !important;
+}
+
+   .form-wrapper{
+        width: 400px !important;
+    }
+
+    @media (max-width:450px) {
+        .form-wrapper{
+            width: auto !important;
+            padding: 40px 10px !important; 
+        }
+    }
