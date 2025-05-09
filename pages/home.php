@@ -41,6 +41,16 @@ include './config.php';
 
             <?php include '../components/main_content.php' ?>
         </div>
+
+
+
+        <div class="position-fixed mk-post-opner rounded-4 d-none d-lg-flex align-items-center justify-content-center ">
+            <i class="bi bi-plus-lg fs-3 "></i>
+
+            <div class="mk-post_popup position-absolute rounded-4">
+
+            </div>
+        </div>
     </div>
     <?php
     include '../components/bootstrap_js.php'
