@@ -16,24 +16,33 @@ include './config.php';
     <link rel="stylesheet" href="../assets/js_css/style.css">
 </head>
 
-<body>
+<body class="bg_main_black text-white ">
 
-<?php
+    <?php
 
-if (!isset($_SESSION["username"])) {
-    header("Location: $base_url/index.php");
-}
-?>
+    if (!isset($_SESSION["username"])) {
+        header("Location: $base_url/index.php");
+    }
+    ?>
+    <!-- main home page -->
 
+    <div class="container-fluid h-100 w-100 row home-bg position-relative min-vh-100 position-relative p-0 m-0">
 
+        <!-- sider_bar   -->
 
-<h5>
-    <?php echo $_SESSION["username"]; ?>
-</h5>
+        <div class="position-absolute start-0 top-0 d-none d-md-block " style="min-height: 100vh;  width: 100px;">
+            <?php
 
+            include '../components/bar.php';
+            ?>
+        </div>
+        <!-- main content  -->
+        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto min-vh-100 p-0  ">
 
-<a href="./logout.php" class="btn btn-danger rounded-4">Logout</a>
-<?php
+            <?php include '../components/main_content.php' ?>
+        </div>
+    </div>
+    <?php
     include '../components/bootstrap_js.php'
     ?>
 </body>
