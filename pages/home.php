@@ -20,7 +20,7 @@ include './config.php';
 
     <?php
 
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["users"])) {
         header("Location: $base_url/index.php");
     }
     ?>
@@ -48,7 +48,25 @@ include './config.php';
             <i class="bi bi-plus-lg fs-3 "></i>
 
             <div class="mk-post_popup position-absolute rounded-4">
+                <div class="w-100">
+                    <div class="row align-items-center p-3 ">
 
+                        <div class="col-4">
+                            <i class="bi bi-x-lg  close_post_popup"></i>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="text-capitalize text-white fw-semibold text-center ">new threads</h5>
+                        </div>
+
+                        <div class="col-4 d-flex justify-content-end align-items-center gap-4">
+                            <i class="bi bi-chat-left-text-fill fs-5"></i>
+                            <i class="bi bi-three-dots rounded-circle fs-4 border-1 border-black border-dark"></i>
+                        </div>
+                    </div>
+
+                    <hr class="mt-0">
+
+                </div>
             </div>
         </div>
     </div>

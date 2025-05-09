@@ -95,7 +95,7 @@ h6 {
   will-change: transform;
 }
 
-.mk-post-opner:hover {
+/* .mk-post-opner:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }
@@ -105,11 +105,11 @@ h6 {
 }
 .mk-post_popup:hover {
   transform: scale(0.91) !important;
-}
+} */
 .mk-post_popup {
   right: 0px;
   bottom: 0px;
-  width: 400px;
+  width: 500px;
   height: 250px;
   background-color: #1e1e1e;
   border: 1px solid rgb(73, 73, 73);

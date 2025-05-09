@@ -22,7 +22,11 @@ $add_data = "INSERT INTO users (f_name, l_name, u_name, m_mail, password) VALUES
  mysqli_query($connection, $add_data) or die();
 
 
-$_SESSION["username"] = $f_name;
+$_SESSION["users"] = [
+"username" => $u_name,
+"firstname" =>$f_name
+    
+];
 
 
 header("Location: $base_url/pages/home.php");

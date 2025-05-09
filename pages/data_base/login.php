@@ -22,7 +22,10 @@ $convert = mysqli_fetch_assoc($result);
 
 
 if ($rows > 0) {
-$_SESSION["username"] = $convert["f_name"];
+    $_SESSION["user"] = [
+        "username" => $convert["u_name"],
+        "firstname" => $convert["f_name"]
+    ];
 header("Location: $base_url/pages/home.php");
 
 } else {

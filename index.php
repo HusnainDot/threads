@@ -66,7 +66,7 @@ include './pages/config.php';
 <body class="bg_main_black overflow-x-hidden">
 
     <?php
-    if (isset($_SESSION["username"])) {
+    if (isset($_SESSION["users"])) {
         header("Location: $base_url/pages/home.php");
     };
 
