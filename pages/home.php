@@ -43,32 +43,22 @@ include './config.php';
         </div>
 
 
-
+        <!-- make post popup opner -->
         <div class="position-fixed mk-post-opner rounded-4 d-none d-lg-flex align-items-center justify-content-center ">
             <i class="bi bi-plus-lg fs-3 "></i>
 
-            <div class="mk-post_popup position-absolute rounded-4">
-                <div class="w-100">
-                    <div class="row align-items-center p-3 ">
-
-                        <div class="col-4">
-                            <i class="bi bi-x-lg  close_post_popup"></i>
-                        </div>
-                        <div class="col-4">
-                            <h5 class="text-capitalize text-white fw-semibold text-center ">new threads</h5>
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-end align-items-center gap-4">
-                            <i class="bi bi-chat-left-text-fill fs-5"></i>
-                            <i class="bi bi-three-dots rounded-circle fs-4 border-1 border-black border-dark"></i>
-                        </div>
-                    </div>
-
-                    <hr class="mt-0">
-
-                </div>
+            <div class="mk-post_popup_1  hide_mk_post_1 rounded-4 ">
+                <?php include '../components/post_modal.php'
+                ?>
             </div>
         </div>
+
+        <!-- mk post modal -->
+        <div class="mk-post_popup_2 hide_mk_post_2  rounded-4">
+            <?php include '../components/post_modal.php'
+            ?>
+        </div>
+
     </div>
     <?php
     include '../components/bootstrap_js.php'

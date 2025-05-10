@@ -36,9 +36,10 @@
                 <i class="bi bi-search fs-4"></i> </a>
         </div>
         <!-- new post -->
-        <div class=" w-100 py-md-2 post-icone icones rounded-4" style="background-color: #181818;">
-            <a href="./" class="text-secondary text-center d-block">
-                <i class="bi bi-plus-lg fs-3"></i> </a>
+        <div class=" w-100 py-md-2 post-icone icones rounded-4 position-relative post_modal_opner_2" style="background-color: #181818;">
+                <i class="bi bi-plus-lg fs-3 text-center text-secondary d-block" style="cursor: pointer;"></i> 
+
+                
         </div>
         <!-- Notification-->
         <div class=" w-100 py-md-2 notification-icone icones rounded-4">
