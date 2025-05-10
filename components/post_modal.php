@@ -1,13 +1,14 @@
 <div class="w-100">
     <div class="row align-items-center p-3 ">
-
+        <!-- close post modal -->
         <div class="col-4">
-            <i class="bi bi-x-lg  close_post_popup_1 close_post_popup_2"></i>
+            <i class="bi bi-x-lg close_post_popup"  style="cursor: pointer;"></i>
         </div>
+        <!-- heading -->
         <div class="col-4">
             <h5 class="text-capitalize text-white fw-semibold text-center ">new threads</h5>
         </div>
-
+<!-- option and menu -->
         <div class="col-4 d-flex justify-content-end align-items-center gap-4">
             <i class="bi bi-chat-left-text-fill fs-5"></i>
             <i class="bi bi-three-dots rounded-circle fs-4 border-1 border-black border-dark"></i>

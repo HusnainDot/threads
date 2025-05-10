@@ -28,6 +28,14 @@ include './config.php';
 
     <div class="container-fluid h-100 w-100 row home-bg position-relative min-vh-100 position-relative p-0 m-0">
 
+        <!-- post modal -->
+        <div class="sc_mk-post_popup  rounded-4 ">
+            <?php include '../components/post_modal.php'
+            ?>
+        </div>
+
+
+
         <!-- sider_bar   -->
 
         <div class="position-absolute start-0 top-0 d-none d-md-block " style="min-height: 100vh;  width: 100px;">
@@ -47,17 +55,13 @@ include './config.php';
         <div class="position-fixed mk-post-opner rounded-4 d-none d-lg-flex align-items-center justify-content-center ">
             <i class="bi bi-plus-lg fs-3 "></i>
 
-            <div class="mk-post_popup_1  hide_mk_post_1 rounded-4 ">
+            <div class="mk-post_popup  rounded-4 ">
                 <?php include '../components/post_modal.php'
                 ?>
             </div>
         </div>
 
-        <!-- mk post modal -->
-        <div class="mk-post_popup_2 hide_mk_post_2  rounded-4">
-            <?php include '../components/post_modal.php'
-            ?>
-        </div>
+
 
     </div>
     <?php
