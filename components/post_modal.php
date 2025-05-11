@@ -1,14 +1,14 @@
-<div class="w-100">
+<div class="w-100 h-100">
     <div class="row align-items-center p-3 ">
         <!-- close post modal -->
         <div class="col-4">
-            <i class="bi bi-x-lg close_post_popup"  style="cursor: pointer;"></i>
+            <i class="bi bi-x-lg close_post_popup" style="cursor: pointer;"></i>
         </div>
         <!-- heading -->
         <div class="col-4">
             <h5 class="text-capitalize text-white fw-semibold text-center ">new threads</h5>
         </div>
-<!-- option and menu -->
+        <!-- option and menu -->
         <div class="col-4 d-flex justify-content-end align-items-center gap-4">
             <i class="bi bi-chat-left-text-fill fs-5"></i>
             <i class="bi bi-three-dots rounded-circle fs-4 border-1 border-black border-dark"></i>
@@ -18,8 +18,8 @@
     <hr class="mt-0">
 
     <!-- user -->
-    <div class="px-4">
-        <form action="" 1 method="POST">
+    <form action="" 1 method="POST" class="h-auto w-auto">
+        <div class="px-4 d-flex flex-column justify-content-between h-100  position-relative" >
             <div class="d-flex align-items-start gap-3">
                 <div class="d-flex flex-column align-items-center gap-3">
                     <div>
@@ -68,8 +68,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="d-flex align-items-center justify-content-between mt-3">
+            <div class="d-flex align-items-center justify-content-between ">
                 <!-- choose who can see your post -->
                 <div>
                     <h6 class="text-secondary">Anyone can reply & quote</h6>
@@ -77,7 +76,7 @@
 
                 <button class="btn rounded-3 px-2 py-1 text-secondary" style="border:1px solid gray; font-size: 14px;">Post</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 
 </div>

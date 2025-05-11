@@ -78,6 +78,13 @@ h6 {
   .side_bar {
     min-height: 10%;
   }
+
+  .mk_post_modal_2{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+  }
 }
 
 /* home page */
@@ -104,7 +111,7 @@ h6 {
   transform: translateX(150%);
 }
 
-.sc_mk-post_popup {
+.mk_post_modal_2{
   position: absolute;
   top: 0%;
   left: 50%;
@@ -118,64 +125,3 @@ h6 {
   z-index: 99;
   opacity: 0;
 }
-/* 
-
-skip post modal 2
-
-
-.mk-post_popup_2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-  transform-style: preserve-3d;
-  perspective: 1200px;
-  will-change: transform, opacity;
-  width: 500px;
-  height: 250px;
-  background-color: #1e1e1e;
-  border: 1px solid rgb(73, 73, 73);
-}
-
-.show_mk_post_2 {
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.hide_mk_post_2 {
-  transform: matrix3d(
-    0.3,
-    0.3,
-    0.2,
-    0.001,
-    -0.3,
-    0.3,
-    0.1,
-    0.002,
-    0.2,
-    -0.2,
-    1,
-    0.002,
-    500,
-    -500,
-    0,
-    1
-  );
-  opacity: 0;
-  pointer-events: none;
-} */
-
-/* .mk-post-opner:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-
-.mk-post-opner:hover .mk-post_popup {
-  transform: scale(1) !important;
-}
-.mk-post_popup:hover {
-  transform: scale(0.91) !important;
-} */

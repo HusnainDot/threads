@@ -18,7 +18,7 @@
         </div>
 
         <div class="col-4 d-flex align-items-center justify-content-end">
-            <a href="./" class="btn px-3 bg-white rounded-3">Open app</a>
+            <a href="./" class="btn px-2  bg-white rounded-3">Open app</a>
 
         </div>
 
@@ -29,9 +29,46 @@
 
     </div>
 
-
+    <!-- main content -->
     <div class="card rounded-4 border-1 border-dark  sm_main_content">
+        <!-- post modal opner -->
+        <div class="px-4 py-3  align-items-center justify-content-between post_modal_opner_3 d-none d-md-flex" style="cursor: pointer;">
+            <div class="d-flex align-items-center gap-2 ">
 
+                <img src="../assets/img/72f3228a91ee.png" alt="" width="40px" height="40px" style="object-fit: cover;">
+
+                <h5 class="fs-6 text-secondary text-capitalize mt-2">
+                    what on you mind?
+                    <?php echo htmlspecialchars($_SESSION["users"]["username"]); ?>
+                </h5>
+            </div>
+
+            <button class="btn rounded-3 px-2 py-1 text-secondary" style="border:1px solid gray; font-size: 14px;">Post</button>
+        </div>
+
+        <!-- sm btns  -->
+        <div class="px-4 align-items-center row d-flex d-md-none">
+            <div class="col-6  py-3" style="border-bottom:1px solid white;">
+                <span class="text-white text-center d-block fw-bold "> For you</span>
+            </div>
+            <div class="col-6  py-3" style="border-bottom:1px solid gray;">
+
+                <span class="text-secondary text-center d-block fw-bold"> Following</span>
+            </div>
+
+        </div>
+
+        <!-- line -->
+        <div class="my-1 w-100 d-none d-md-block " style="border-bottom: 0.1px solid rgb(66, 66, 66);"></div>
+
+
+        <!-- include posts -->
+        <div class="w-100 text-white">
+
+        <?php
+        include __DIR__ . '/posts.php';
+        ?>
+        </div>
 
     </div>
 
@@ -40,7 +77,7 @@
 
 
 
-    <div class="d-md-none d-block position-fixed bottom-0 w-100">
+    <div class="d-md-none d-block position-fixed bottom-0 w-100" style="background-color: rgba(16, 16, 16, 0.39);;">
         <?php
         include __DIR__ . '/bar.php';
         ?>

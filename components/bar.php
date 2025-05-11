@@ -5,7 +5,7 @@
 
 
 
-<div class=" px-1  side_bar w-100 d-flex flex-md-column align-items-center justify-content-between" >
+<div class=" px-1  side_bar w-100 d-flex flex-md-column align-items-center justify-content-between">
 
     <div class="logo py-3 d-md-block d-none">
         <a href="../pages/home.php">
@@ -36,10 +36,8 @@
                 <i class="bi bi-search fs-4"></i> </a>
         </div>
         <!-- new post -->
-        <div class=" w-100 py-md-2 post-icone icones rounded-4 position-relative post_modal_opner_2" style="background-color: #181818;">
-                <i class="bi bi-plus-lg fs-3 text-center text-secondary d-block" style="cursor: pointer;"></i> 
-
-                
+        <div class=" w-100 py-md-2 post-icone icones rounded-4 position-relative post_modal_opner_2 " style="background-color: #181818;cursor: pointer;">
+            <i class="bi bi-plus-lg fs-3 text-center text-secondary d-block"></i>
         </div>
         <!-- Notification-->
         <div class=" w-100 py-md-2 notification-icone icones rounded-4">

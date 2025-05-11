@@ -29,7 +29,7 @@ include './config.php';
     <div class="container-fluid h-100 w-100 row home-bg position-relative min-vh-100 position-relative p-0 m-0">
 
         <!-- post modal -->
-        <div class="sc_mk-post_popup  rounded-4 ">
+        <div class="mk_post_modal_2  rounded-4 ">
             <?php include '../components/post_modal.php'
             ?>
         </div>
