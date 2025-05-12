@@ -16,7 +16,7 @@ include './config.php';
     <link rel="stylesheet" href="../assets/js_css/style.css">
 </head>
 
-<body class="bg_main_black text-white ">
+<body class="bg_main_black text-white w-100 ">
 
     <?php
 
@@ -55,7 +55,7 @@ include './config.php';
         <div class="position-fixed mk-post-opner rounded-4 d-none d-lg-flex align-items-center justify-content-center ">
             <i class="bi bi-plus-lg fs-3 "></i>
 
-            <div class="mk-post_popup  rounded-4 ">
+            <div class="mk-post_popup rounded-4 ">
                 <?php include '../components/post_modal.php'
                 ?>
             </div>

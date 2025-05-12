@@ -2,7 +2,7 @@
 
 
 
-    <div class="d-md-none d-flex w-100 align-items-center  px-3" style="height: 8%;">
+    <div class="d-md-none d-flex w-100 align-items-center mx-auto  px-3" style="height: 8%;">
         <div class="col-4">
             <a href="./" class="text-secondary">
                 <i class="bi bi-list fs-3"></i>
@@ -77,7 +77,7 @@
 
 
 
-    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center " style="background-color: rgba(0, 0, 0, 0.79);height: 40px;">
+    <div class="d-md-none d-none position-fixed bottom-0 w-100 align-items-center  " style="background-color: rgba(0, 0, 0, 0.79);height: 40px;">
         <?php
         include __DIR__ . '/bar.php';
         ?>
