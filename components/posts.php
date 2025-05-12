@@ -1,13 +1,13 @@
 <!-- posts  -->
 
 <div class="w-100 ">
-    <div class="px-4 py-3">
+    <div class="px-4 py-3 w-100"  >
         <!-- user -->
         <div class="d-flex align-items-start gap-2 ">
             <!-- user dp -->
             <img src="../assets/img/72f3228a91ee.png" alt="" width="40px" height="40px" style="object-fit: cover;">
             <!-- user post -->
-            <div>
+            <div class="w-100">
                 <!-- user name  -->
                 <div class="d-flex flex-column  ">
                     <div class="d-flex align-items-center  gap-2">
@@ -27,8 +27,8 @@
 
                 </div>
                 <!-- user post img -->
-                <div class="py-2">
-                    <img src="../assets/img/496972644_17845613220473820_8228180245122087258_n.jpg" alt="" class="rounded-2" style="width: 350px; object-fit: contain;">
+                <div class="py-2 w-100">
+                    <img src="../assets/img/496972644_17845613220473820_8228180245122087258_n.jpg" alt="" class="rounded-2 user-posts w-100" style="object-fit: contain;">
                 </div>
 
 

@@ -18,7 +18,7 @@
 
 
 
-    <ul class="list-unstyled d-flex flex-md-column align-items-center gap-2  w-100">
+    <ul class="list-unstyled d-flex flex-md-column align-items-center gap-2 m-0  w-100">
 
         <!-- bar icons -->
 

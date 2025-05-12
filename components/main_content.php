@@ -65,9 +65,9 @@
         <!-- include posts -->
         <div class="w-100 text-white">
 
-        <?php
-        include __DIR__ . '/posts.php';
-        ?>
+            <?php
+            include __DIR__ . '/posts.php';
+            ?>
         </div>
 
     </div>
@@ -77,7 +77,7 @@
 
 
 
-    <div class="d-md-none d-block position-fixed bottom-0 w-100" style="background-color: rgba(16, 16, 16, 0.39);;">
+    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center " style="background-color: rgba(0, 0, 0, 0.79);height: 40px;">
         <?php
         include __DIR__ . '/bar.php';
         ?>
