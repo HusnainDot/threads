@@ -44,25 +44,33 @@ document.addEventListener("click", function (e) {
                 })
             }
 
-            // upload temp img
+            // upload btn 
             if (uploadButton && !uploadButton.dataset.listenerAdded) {
-                uploadButton.dataset.listenerAdded = "true"; // prevent duplicate binding
+                uploadButton.dataset.listenerAdded = "true";
                 uploadButton.addEventListener("click", () => {
                     temImg.classList.remove("d-none")
 
                 });
+
             };
 
+
+            // upload temp img
 
             if (upload_imag && !upload_imag.dataset.listenerAdded) {
                 upload_imag.dataset.listenerAdded = "true";
-                upload_imag.addEventListener("click", (event) => {
-                    pstm_preview_img.classList.remove("d-none")
-                    temImg.style.height = "100%";
+                upload_imag.addEventListener("input", (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const fileUrl = URL.createObjectURL(file)
 
-                });
-            };
+                        pstm_preview_img.classList.remove("d-none");
+                        pstm_preview_img.src = fileUrl;
+                    }
 
+                })
+
+            }
 
 
 
@@ -184,11 +192,13 @@ document.addEventListener("click", (e) => {
     const modal = document.querySelector(".mk_post_modal_2");
 
     if (modal) {
-        const temImg = modal.querySelector(".temp_img");
+        const temImg = modal.querySelector(".temp_img")
         const uploadButton = modal.querySelector(".pstm_upload_image");
         const pstm_btn = modal.querySelector(".pstm_btn");
-        const pstm_caption = modal.querySelector(".pstm_caption");
+        const pstm_caption = modal.querySelector(".pstm_caption")
         const close_temp_img = modal.querySelector(".close_temp_img");
+        const upload_imag = modal.querySelector(".upload_imag");
+        const pstm_preview_img = modal.querySelector(".pstm_preview_img");
         // for caption functionality
         if (pstm_caption && !pstm_caption.dataset.listenerAdded) {
             pstm_caption.dataset.listenerAdded = "true";
@@ -215,12 +225,30 @@ document.addEventListener("click", (e) => {
         };
 
 
+        // upload temp img
+
+        if (upload_imag && !upload_imag.dataset.listenerAdded) {
+            upload_imag.dataset.listenerAdded = "true";
+            upload_imag.addEventListener("input", (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const fileUrl = URL.createObjectURL(file)
+                    pstm_preview_img.classList.remove("d-none");
+                    pstm_preview_img.src = fileUrl;
+                }
+
+            })
+
+        }
+
+
         // close temp img
         if (close_temp_img && !close_temp_img.dataset.listenerAdded) {
             close_temp_img.dataset.listenerAdded = "true";
             close_temp_img.addEventListener("click", () => {
 
                 temImg.classList.add("d-none");
+                pstm_preview_img.classList.add("d-none")
 
 
             })

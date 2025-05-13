@@ -41,19 +41,18 @@
 
                     <!-- temporary image  -->
 
-                    <div class="w-100 rounded-3 temp_img d-none position-relative rounded-2 d-flex align-items-center justify-content-center flex-column gap-1" style="height: 200px; border:1px solid rgb(73, 73, 73);">
-                        <div class="close_temp_img position-absolute rounded-circle" style="padding: 3px 6px; right: 5px; top: 5px;background-color: #0d0d0d; cursor: pointer;">
-                            <i class="bi bi-x-lg text-white "></i>
+                    <div class="w-100 rounded-3 temp_img d-none position-relative d-flex align-items-center justify-content-center flex-column gap-1 p-1" style="height: 200px; border:1px solid rgb(73, 73, 73); max-height: 500px;">
+                        <div class="close_temp_img position-absolute rounded-circle" style="padding: 3px 6px; right: 5px; top: 5px; background-color: #0d0d0d; cursor: pointer; z-index: 10;">
+                            <i class="bi bi-x-lg text-white"></i>
                         </div>
-                        <label for="up_load_file" class="d-flex align-items-center justify-content-center flex-column" style="cursor: pointer;">
-                            <input type="text" id="up_load_file" name="up_load_file" class="hidden upload_imag">
-                            <i class="bi bi-file-earmark-plus fs-3 text-secondary" style="cursor: pointer;"></i>
-                            <h5 class="text-secondary fw-semibold">
-                                Upload images and video
-                            </h5>
+                        <label for="up_load_file" class="d-flex align-items-center justify-content-center flex-column w-100 h-100 position-relative" style="cursor: pointer;">
+                            <input type="file" id="up_load_file" name="up_load_file" class="position-absolute w-100 h-100 opacity-0 upload_imag" style="top: 0; left: 0; cursor: pointer;">
+                            <i class="bi bi-file-earmark-plus fs-3 text-secondary"></i>
+                            <h5 class="text-secondary fw-semibold">Upload images and video</h5>
                         </label>
-                        <img src="../assets/img/496972644_17845613220473820_8228180245122087258_n.jpg" class="pstm_preview_img d-none w-100 h-100 position-absolute top-0  " alt="sf" style="z-index: 99999999; object-fit: cover;">
+                        <img src="" class="pstm_preview_img d-none w-100 h-100  position-absolute top-0 rounded-2" alt="Preview" style="z-index: 9; object-fit: cover;">
                     </div>
+
                     <!-- upload files or emojis from icons -->
                     <div class="form-group d-flex mt-2 align-items-center gap-4">
                         <!-- upload files -->
