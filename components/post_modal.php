@@ -41,16 +41,16 @@
 
                     <!-- temporary image  -->
 
-                    <div class="w-100   rounded-3 temp_img " style="height: 200px;">
+                    <div class="w-100 rounded-3 temp_img  d-none" style="height: 200px;">
                         <img src="" alt="">
                     </div>
                     <!-- upload files or emojis from icons -->
                     <div class="form-group d-flex mt-2 align-items-center gap-4">
                         <!-- upload files -->
-                        <div class="pstm_upload_image ">
-                            <label for=" up_load_file" >
-                            <input type="file" id="up_load_file" name="up_load_file" class="d-none">
-                            <i class="bi bi-file-earmark-plus fs-5 text-secondary" style="cursor: pointer;"></i>
+                        <div class="pstm_upload_image">
+                            <label for=" up_load_file">
+                                <input type="file" id="up_load_file" name="up_load_file" class="d-none">
+                                <i class="bi bi-file-earmark-plus fs-5 text-secondary" style="cursor: pointer;"></i>
                             </label>
                         </div>
 
