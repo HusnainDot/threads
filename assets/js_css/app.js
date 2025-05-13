@@ -9,7 +9,7 @@ const pstm_caption = document.querySelector(".pstm_caption")
 const pstm_upload_image = document.querySelector(".pstm_upload_image")
 const pstm_tem_img = document.querySelector(".temp_img")
 
-  
+
 // post modal 1
 document.addEventListener("click", function (e) {
     const target = e.target.closest(".mk-post-opner");
@@ -23,11 +23,14 @@ document.addEventListener("click", function (e) {
             const uploadButton = modal.querySelector(".pstm_upload_image");
             const pstm_btn = modal.querySelector(".pstm_btn");
             const pstm_caption = modal.querySelector(".pstm_caption")
+            const close_temp_img = modal.querySelector(".close_temp_img");
+            const upload_imag = modal.querySelector(".upload_imag");
+            const pstm_preview_img = modal.querySelector(".pstm_preview_img");
 
 
             if (pstm_caption && !pstm_caption.dataset.listenerAdded) {
                 pstm_caption.dataset.listenerAdded = "true";
-                pstm_caption.addEventListener("input", () => { 
+                pstm_caption.addEventListener("input", () => {
                     if (pstm_caption.value != "") {
                         pstm_btn.disabled = false;
                         pstm_btn.classList.add("bg-white");
@@ -41,14 +44,42 @@ document.addEventListener("click", function (e) {
                 })
             }
 
-
+            // upload temp img
             if (uploadButton && !uploadButton.dataset.listenerAdded) {
                 uploadButton.dataset.listenerAdded = "true"; // prevent duplicate binding
                 uploadButton.addEventListener("click", () => {
                     temImg.classList.remove("d-none")
 
                 });
-            }
+            };
+
+
+            if (upload_imag && !upload_imag.dataset.listenerAdded) {
+                upload_imag.dataset.listenerAdded = "true";
+                upload_imag.addEventListener("click", (event) => {
+                    pstm_preview_img.classList.remove("d-none")
+                    temImg.style.height = "100%";
+
+                });
+            };
+
+
+
+
+            // close temp img
+            if (close_temp_img && !close_temp_img.dataset.listenerAdded) {
+                close_temp_img.dataset.listenerAdded = "true";
+                close_temp_img.addEventListener("click", () => {
+
+                    temImg.classList.add("d-none");
+                    pstm_preview_img.classList.add("d-none")
+
+
+                })
+
+
+            };
+
         }
     }
 });
@@ -157,7 +188,8 @@ document.addEventListener("click", (e) => {
         const uploadButton = modal.querySelector(".pstm_upload_image");
         const pstm_btn = modal.querySelector(".pstm_btn");
         const pstm_caption = modal.querySelector(".pstm_caption");
-// for caption functionality
+        const close_temp_img = modal.querySelector(".close_temp_img");
+        // for caption functionality
         if (pstm_caption && !pstm_caption.dataset.listenerAdded) {
             pstm_caption.dataset.listenerAdded = "true";
             pstm_caption.addEventListener("input", () => {
@@ -172,15 +204,30 @@ document.addEventListener("click", (e) => {
                 }
             });
         };
-// upload tem img
+        // upload temp img
         if (uploadButton && !uploadButton.dataset.listenerAdded) {
-            uploadButton.dataset.listenerAdded = "true"; // prevent duplicate binding
+            uploadButton.dataset.listenerAdded = "true";
             uploadButton.addEventListener("click", () => {
                 if (temImg) {
                     temImg.classList.remove("d-none");
                 }
             });
-        }
+        };
+
+
+        // close temp img
+        if (close_temp_img && !close_temp_img.dataset.listenerAdded) {
+            close_temp_img.dataset.listenerAdded = "true";
+            close_temp_img.addEventListener("click", () => {
+
+                temImg.classList.add("d-none");
+
+
+            })
+
+
+        };
+
     }
 });
 
