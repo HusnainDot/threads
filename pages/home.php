@@ -19,10 +19,10 @@ include './config.php';
 <body class="bg_main_black text-white w-100 ">
 
     <?php
-if (isset($_SESSION["posted"])) {
+    if (isset($_SESSION["posted"])) {
         echo "
     <div class='position-absolute text-success invalid_popup d-flex align-items-center gap-2 border border-dark  rounded-3 p-2 ' style='bottom:90%;'>
-<i class='fa-solid fa-exclamation fs-3'></i>
+<i class='bi bi-check-circle fs-4'></i>
 <h5 class='text-capitalize '>invalid Cardentials</h5>
 </div>";
     }
@@ -51,7 +51,7 @@ if (isset($_SESSION["posted"])) {
             ?>
         </div>
         <!-- main content  -->
-        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto min-vh-100 p-0  ">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto h-100 min-vh-100 p-0  ">
 
             <?php include '../components/main_content.php' ?>
         </div>
@@ -71,6 +71,9 @@ if (isset($_SESSION["posted"])) {
 
     </div>
     <?php
+    unset($_SESSION["posted"]);
+
+
     include '../components/bootstrap_js.php'
     ?>
 </body>

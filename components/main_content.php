@@ -1,7 +1,5 @@
 <div class="w-100 h-100 position-relative">
 
-
-
     <div class="d-md-none d-flex w-100 align-items-center mx-auto  px-3" style="height: 8%;">
         <div class="col-4">
             <a href="./" class="text-secondary">

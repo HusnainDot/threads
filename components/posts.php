@@ -1,5 +1,14 @@
 <!-- posts  -->
+<?php
+include '../pages/config.php';
+$select = "SELECT * FROM posts";
+$result = mysqli_query($connection,$select);
 
+foreach ($result as $item) {
+
+
+
+?>
 <div class="w-100 ">
     <div class="px-4 py-3 w-100"  >
         <!-- user -->
@@ -74,3 +83,9 @@
 
 </div>
 
+
+
+<?php
+};
+
+?>
