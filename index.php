@@ -37,30 +37,6 @@ include './pages/config.php';
 
     }
 
-    .invalid {
-        right: 40px;
-        bottom: 5%;
-        animation: invlid 5s forwards;
-        transform: translateX(150%);
-    }
-
-    @keyframes invlid {
-        0% {
-            transform: translateX(150%);
-        }
-
-        20% {
-            transform: translateX(0%);
-        }
-
-        60% {
-            transform: translateX(0%);
-        }
-
-        100% {
-            transform: translateX(150%);
-        }
-    }
 </style>
 
 <body class="bg_main_black overflow-x-hidden">
@@ -74,7 +50,7 @@ include './pages/config.php';
 
     if (isset($_SESSION["noUser"])) {
         echo "
-               <div class='position-absolute text-danger invalid d-flex align-items-center gap-2 border border-dark  rounded-3 p-2 '>
+               <div class='position-absolute text-danger invalid_popup d-flex align-items-center gap-2 border border-dark  rounded-3 p-2 '>
         <i class='fa-solid fa-exclamation fs-3'></i>
         <h5 class='text-capitalize '>invalid Cardentials</h5>
     </div>";

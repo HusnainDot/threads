@@ -22,6 +22,32 @@ h6 {
   margin: 0px !important;
 }
 
+
+
+.invalid_popup {
+  right: 40px;
+  bottom: 5%;
+  animation: invlid 5s forwards;
+  transform: translateX(150%);
+}
+
+@keyframes invlid {
+  0% {
+      transform: translateX(150%);
+  }
+
+  20% {
+      transform: translateX(0%);
+  }
+
+  60% {
+      transform: translateX(0%);
+  }
+
+  100% {
+      transform: translateX(150%);
+  }
+}
 /* logian page and create new account */
 
 .login-input::placeholder {

@@ -19,7 +19,13 @@ include './config.php';
 <body class="bg_main_black text-white w-100 ">
 
     <?php
-
+if (isset($_SESSION["posted"])) {
+        echo "
+    <div class='position-absolute text-success invalid_popup d-flex align-items-center gap-2 border border-dark  rounded-3 p-2 ' style='bottom:90%;'>
+<i class='fa-solid fa-exclamation fs-3'></i>
+<h5 class='text-capitalize '>invalid Cardentials</h5>
+</div>";
+    }
     if (!isset($_SESSION["users"])) {
         header("Location: $base_url/index.php");
     }
