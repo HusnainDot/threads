@@ -18,7 +18,7 @@
     <hr class="mt-0">
 
     <!-- user -->
-    <form action="" 1 method="POST" class="h-100 w-auto">
+    <form action="../pages/data_base/mk_post.php" 1 method="POST" class="h-100 w-auto" enctype="multipart/form-data">
         <div class="px-4 d-flex flex-column justify-content-between position-relative" style="height: 80%;">
             <div class="d-flex align-items-start gap-3">
                 <div class="d-flex flex-column align-items-center gap-3">
@@ -90,7 +90,7 @@
                     <h6 class="text-secondary">Anyone can reply & quote</h6>
                 </div>
 
-                <button class="btn rounded-3 px-2 py-1 text-secondary pstm_btn " style="border:1px solid gray; font-size: 14px;">Post</button>
+                <button class="btn rounded-3 px-2 py-1 text-secondary pstm_btn " style="border:1px solid gray; font-size: 14px;" disabled>Post</button>
             </div>
         </div>
     </form>

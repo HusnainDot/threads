@@ -63,10 +63,13 @@ document.addEventListener("click", function (e) {
                     const file = event.target.files[0];
                     if (file) {
                         const fileUrl = URL.createObjectURL(file)
-
+                        pstm_btn.disabled = false;
+                        pstm_btn.classList.add("bg-white");
+                        pstm_btn.classList.add("text-black");
                         pstm_preview_img.classList.remove("d-none");
                         pstm_preview_img.src = fileUrl;
                     }
+                 
 
                 })
 
@@ -81,7 +84,10 @@ document.addEventListener("click", function (e) {
 
                     temImg.classList.add("d-none");
                     pstm_preview_img.classList.add("d-none")
-
+                    pstm_preview_img.src = "";
+                    pstm_btn.disabled = true;
+                    pstm_btn.classList.remove("bg-white");
+                    pstm_btn.classList.remove("text-black");
 
                 })
 
@@ -187,7 +193,7 @@ close_post_popup.forEach((btn) => {
     });
 });
 
-
+// post upload 
 document.addEventListener("click", (e) => {
     const modal = document.querySelector(".mk_post_modal_2");
 
@@ -235,6 +241,9 @@ document.addEventListener("click", (e) => {
                     const fileUrl = URL.createObjectURL(file)
                     pstm_preview_img.classList.remove("d-none");
                     pstm_preview_img.src = fileUrl;
+                    pstm_btn.disabled = false;
+                    pstm_btn.classList.add("bg-white");
+                    pstm_btn.classList.add("text-black");
                 }
 
             })
@@ -249,7 +258,9 @@ document.addEventListener("click", (e) => {
 
                 temImg.classList.add("d-none");
                 pstm_preview_img.classList.add("d-none")
-
+                pstm_btn.disabled = true;
+                pstm_btn.classList.remove("bg-white");
+                pstm_btn.classList.remove("text-black");
 
             })
 

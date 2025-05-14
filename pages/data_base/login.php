@@ -22,12 +22,12 @@ $convert = mysqli_fetch_assoc($result);
 
 
 if ($rows > 0) {
-    $_SESSION["user"] = [
-        "username" => $convert["u_name"],
-        "firstname" => $convert["f_name"]
+    $_SESSION["users"] = [
+        "userId" => $convert["id"],
+        "firstname" => $convert["f_name"],
+        "username" => $convert["u_name"]
     ];
-header("Location: $base_url/pages/home.php");
-
+    header("Location: $base_url/pages/home.php");
 } else {
     $_SESSION['noUser'] = "invalid_cardentials";
     header("Location: {$_SERVER['HTTP_REFERER']}");

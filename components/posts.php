@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="my-1 w-100 d-none d-md-block " style="border-bottom: 0.1px solid rgb(66, 66, 66);"></div>
+    <div class="my-1 w-100 " style="border-bottom: 0.1px solid #6e6e6e;"></div>
 
 </div>
 

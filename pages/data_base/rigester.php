@@ -19,14 +19,25 @@ $add_data = "INSERT INTO users (f_name, l_name, u_name, m_mail, password) VALUES
 
 
 
- mysqli_query($connection, $add_data) or die();
 
+if (mysqli_query($connection, $add_data)) {
+    // Get the last inserted user ID
+    $last_id = mysqli_insert_id($connection);
 
-$_SESSION["users"] = [
-"username" => $u_name,
-"firstname" =>$f_name
-    
-];
+    // Fetch the newly inserted user record
+    $query = "SELECT * FROM users WHERE id = $last_id";
+    $result = mysqli_query($connection, $query);
+    $convert = mysqli_fetch_assoc($result);
 
+    // Store user data in session
+    $_SESSION["users"] = [
+        "userId" => $convert["id"],
+        "firstname" => $convert["f_name"],
+        "username" => $convert["u_name"]
+    ];
 
-header("Location: $base_url/pages/home.php");
+    header("Location: $base_url/pages/home.php");
+    exit;
+} else {
+    echo "Error: " . mysqli_error($connection);
+};
