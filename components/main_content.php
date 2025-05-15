@@ -1,10 +1,30 @@
-<div class="w-100 h-100 position-relative">
+<div class="w-100  position-relative  ">
 
-    <div class="d-md-none d-flex w-100 align-items-center mx-auto  px-3" style="height: 8%;">
+
+    <div class="d-md-none d-flex w-100 align-items-center mx-auto px-3" style="height: 8%;">
+        <!-- menu icone -->
         <div class="col-4">
-            <a href="./" class="text-secondary">
-                <i class="bi bi-list fs-3"></i>
-            </a>
+            <div class="text-secondary position-relative ">
+
+                <i class="bi bi-list fs-3 " id="sm-nav-menu-icone"></i>
+
+
+
+                <div class="position-absolute nav-menu ">
+                    <div class="custom-menu ">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Appearance</a>
+                            <a href="#" class="list-group-item">Insights</a>
+                            <a href="#" class="list-group-item">Settings</a>
+                            <a href="#" class="list-group-item">Feeds</a>
+                            <a href="#" class="list-group-item">Saved</a>
+                            <a href="#" class="list-group-item">Liked</a>
+                            <a href="#" class="list-group-item">Report a problem</a>
+                            <a href="../pages/logout.php" class="list-group-item red">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col-4 d-flex align-items-center justify-content-center">
@@ -22,13 +42,16 @@
 
     </div>
 
-    <div class=" align-items-center justify-content-center gap-2 d-none d-md-flex md_nav" style="height: 8%;">
+    <!-- refreh button -->
+    <div class=" align-items-center justify-content-center gap-2 d-none d-md-flex md_nav py-3" style="height: 8%;">
         <h6 class="text-canter"> For you </h6><i class="bi bi-chevron-down border border-secondary rounded-circle " style="padding: 3px 6px; font-size:12px;"></i>
 
     </div>
 
     <!-- main content -->
-    <div class="card rounded-4 border-1 border-dark  sm_main_content">
+
+
+    <div class="card rounded-4 border-1 border-dark pb-5 post_main_content">
         <!-- post modal opner -->
         <div class="px-4 py-3  align-items-center justify-content-between post_modal_opner_3 d-none d-md-flex" style="cursor: pointer;">
             <div class="d-flex align-items-center gap-2 ">
@@ -61,7 +84,7 @@
 
 
         <!-- include posts -->
-        <div class="w-100 text-white">
+        <div class="w-100 text-white ">
 
             <?php
             include __DIR__ . '/posts.php';
@@ -75,7 +98,7 @@
 
 
 
-    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center  " style="background-color: rgba(0, 0, 0, 0.79);height: 40px;">
+    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center  mb-0" style="background-color: rgba(0, 0, 0, 0.98);height: 40px;">
         <?php
         include __DIR__ . '/bar.php';
         ?>

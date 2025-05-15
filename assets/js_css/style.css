@@ -1,10 +1,12 @@
 .bg_main_black {
   background-color: #101010;
 }
-body,html{
-  overflow-x: hidden;
-  width: 100%;
+body,
+html {
+  overflow: hidden;
+  height: 100%;
 }
+
 * {
   font-family: "Nunito", sans-serif !important;
   font-optical-sizing: auto;
@@ -20,31 +22,37 @@ h5,
 h6 {
   margin: 0px !important;
 }
-
-
+.main-content {
+  height: 100vh; /* Take full viewport height */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main-content::-webkit-scrollbar {
+  display: none !important;
+}
 
 .invalid_popup {
   right: 40px;
   bottom: 5%;
-  animation: invlid 5s forwards;
+  animation: invlid 3s forwards;
   transform: translateX(150%);
 }
 
 @keyframes invlid {
   0% {
-      transform: translateX(150%);
+    transform: translateX(150%);
   }
 
   20% {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   60% {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   100% {
-      transform: translateX(150%);
+    transform: translateX(150%);
   }
 }
 /* logian page and create new account */
@@ -92,13 +100,14 @@ h6 {
 
 /* main content */
 
-.sm_main_content {
-  height: 92%;
+.post_main_content {
+  height: 110vh !important;
   background-color: #181818;
+  height: 100% !important;
 }
 
 @media (max-width: 768px) {
-  .sm_main_content {
+  .post_main_content {
     border-radius: 0px !important;
     background-color: #101010;
     border: 0px !important;
@@ -113,10 +122,11 @@ h6 {
     width: 100vw !important;
     height: 100vh !important;
     left: 0% !important;
-    transform: none !important; 
+    transform: none !important;
     border-radius: 0 !important;
     border: 0 !important;
-}}
+  }
+}
 
 /* home page */
 
@@ -143,7 +153,7 @@ h6 {
 
 .mk_post_modal_2 {
   position: absolute;
-  top: -100%;
+  top: -150%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
@@ -155,3 +165,40 @@ h6 {
 }
 
 /* post modal */
+
+/* menu  */
+
+.custom-menu {
+  background-color: #212529;
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 200px !important;
+}
+.custom-menu .list-group-item {
+  background-color: #212529;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+.custom-menu .list-group-item:hover {
+  background-color: #343a40;
+}
+.custom-menu .list-group-item.red {
+  color: #dc3545;
+}
+.footer-menu {
+  bottom: 40px;
+  left: 0px;
+  transform: scale(0);
+  transform-origin: left bottom;
+  transition: all 0.5s;
+}
+
+.nav-menu {
+  top: 30px !important;
+  left: 0px;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: all 0.5s;
+  z-index: 99;
+}

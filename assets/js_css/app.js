@@ -69,7 +69,7 @@ document.addEventListener("click", function (e) {
                         pstm_preview_img.classList.remove("d-none");
                         pstm_preview_img.src = fileUrl;
                     }
-                 
+
 
                 })
 
@@ -186,7 +186,7 @@ close_post_popup.forEach((btn) => {
         e.stopPropagation();
         const modal = btn.closest(".mk_post_modal_2");
         if (modal) {
-            mk_post_modal_2.style.top = "-50%";
+            mk_post_modal_2.style.top = "-150%";
             mk_post_modal_2.style.opacity = "0";
 
         }
@@ -272,3 +272,64 @@ document.addEventListener("click", (e) => {
 
 
 
+//  footer menu icone
+
+const footerMenuicone = document.querySelector(".footer-menu-icone");
+const footerMenuDropdown = document.querySelector(".footer-menu");
+let footer = false;
+
+footerMenuicone.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (footer) {
+        footerMenuDropdown.style.transform = "scale(0)";
+
+    } else {
+        footerMenuDropdown.style.transform = "scale(1)";
+
+    }
+
+    footer = !footer;
+});
+
+
+document.addEventListener("click", (e) => {
+    if (footer && !footerMenuDropdown.contains(e.target) && !footerMenuicone.contains(e.target)) {
+        footerMenuDropdown.style.transform = "scale(0)";
+        footer = false;
+    }
+
+
+})
+
+
+
+
+// nav menu
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navMenuIcone = document.querySelector("#sm-nav-menu-icone");
+    const navMenuDropdown = document.querySelector(".nav-menu");
+
+    let isOpen = false;
+
+    if (navMenuIcone && navMenuDropdown) {
+        navMenuIcone.addEventListener("click", (e) => {
+            e.stopPropagation();
+            isOpen = !isOpen;
+            navMenuDropdown.style.transform = isOpen ? "scale(1)" : "scale(0)";
+        });
+
+        document.addEventListener("click", (e) => {
+            // If the click is outside both the icon and the menu, close it
+            if (
+                isOpen &&
+                !e.target.closest("#sm-nav-menu-icone") &&
+                !e.target.closest(".nav-menu")
+            ) {
+                navMenuDropdown.style.transform = "scale(0)";
+                isOpen = false;
+            }
+        });
+    }
+});
+  

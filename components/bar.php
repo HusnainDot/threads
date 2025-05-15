@@ -55,11 +55,30 @@
 
     <!-- menu icone -->
     <footer class="menu mb-4 d-none d-md-block">
-        <div class="py-md-2">
-            <a href="./" class="text-secondary">
-                <i class="bi bi-list fs-3"></i>
-            </a>
+        <div class="py-md-2 position-relative">
+          <div class="text-secondary footer-menu-icone" style="cursor: pointer;">
+              <i class="bi bi-list fs-3"></i>
+
+          </div>
+       
+
+            <div class="position-absolute footer-menu">
+                <div class="custom-menu ">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Appearance</a>
+                        <a href="#" class="list-group-item">Insights</a>
+                        <a href="#" class="list-group-item">Settings</a>
+                        <a href="#" class="list-group-item">Feeds</a>
+                        <a href="#" class="list-group-item">Saved</a>
+                        <a href="#" class="list-group-item">Liked</a>
+                        <a href="#" class="list-group-item">Report a problem</a>
+                        <a href="../pages/logout.php" class="list-group-item red">Log out</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </footer>
 
 </div>

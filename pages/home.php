@@ -51,7 +51,7 @@ include './config.php';
             ?>
         </div>
         <!-- main content  -->
-        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto h-100 min-vh-100 p-0  ">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto h-100 p-0 main-content">
 
             <?php include '../components/main_content.php' ?>
         </div>
