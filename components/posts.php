@@ -1,7 +1,6 @@
 <!-- posts  -->
 <?php
 include '../pages/config.php';
-// $select = "SELECT * FROM posts ORDER BY id DESC";
 
 $select = "SELECT posts.id as post_id,posts.caption,posts.image,users.id as us_id,users.u_name From posts join users on posts.user_id = users.id ORDER BY post_id DESC ";
 $result = mysqli_query($connection, $select);
@@ -53,30 +52,35 @@ foreach ($result as $item) {
 
                     <!-- user like comnets shars and repost -->
                     <div class="pt-2 ">
-                        <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-3 post-bar " id="">
 
                             <!-- likes -->
-                            <div class="d-flex align-items-center gap-2 likes">
+                            <div class="d-flex align-items-center gap-2 px-2 py-1  rounded-pill " id="likes">
                                 <i class="bi bi-heart text-white-50 fs-6"></i>
                                 <!--likes count  -->
                                 <span style="font-size: 12px;" class="text-white-50">651</span>
                             </div>
 
                             <!-- comments -->
-                            <div class="d-flex align-items-center gap-2 comments">
+                            <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill position-relative comment-trigger">
                                 <i class="bi bi-chat text-white-50 fs-6"></i>
                                 <!--comments count  -->
                                 <span style="font-size: 12px;" class="text-white-50">651</span>
+
+                                <div class="comment-modal-wrapper   p-5 ">
+                                    <?php include __DIR__ . '/comments_modal.php' ?>
+                                </div>
                             </div>
 
                             <!-- repost -->
-                            <div class="d-flex align-items-center gap-2 repost">
+                            <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill  " id="repost">
                                 <i class="bi bi-arrow-repeat text-white-50 fs-6"></i>
                                 <!--repost count  -->
                                 <span style="font-size: 12px;" class="text-white-50">651</span>
+
                             </div>
                             <!-- share -->
-                            <div class="d-flex align-items-center gap-2 share">
+                            <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill " id="share">
                                 <i class="bi bi-send text-white-50 fs-6"></i>
                                 <!--share count  -->
                                 <span style="font-size: 12px;" class="text-white-50">651</span>

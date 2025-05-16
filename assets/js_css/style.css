@@ -202,3 +202,30 @@ h6 {
   transition: all 0.5s;
   z-index: 99;
 }
+
+/* posts  */
+
+.post-bar #likes:hover,
+.post-bar .comment-trigger:hover,
+.post-bar #repost:hover,
+.post-bar #share:hover {
+  background-color: #212122;
+  cursor: pointer;
+}
+
+
+
+.comment-modal-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  min-height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+

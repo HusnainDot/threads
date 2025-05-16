@@ -98,7 +98,7 @@
 
 
 
-    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center  mb-0" style="background-color: rgba(0, 0, 0, 0.98);height: 40px;">
+    <div class="d-md-none d-block position-fixed bottom-0 w-100 align-items-center mb-0" style="background-color: rgba(0, 0, 0, 0.98);height: 40px;">
         <?php
         include __DIR__ . '/bar.php';
         ?>

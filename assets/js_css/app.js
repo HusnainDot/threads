@@ -332,4 +332,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-  
+
+
+
+
+
+// posts likes comments shares repost
+
+
+
+
+const commentTriggers = document.querySelectorAll(".comment-trigger");
+const closeButtons = document.querySelectorAll(".close-comment-modal");
+
+commentTriggers.forEach(trigger => {
+    const modal = trigger.querySelector(".comment-modal-wrapper");
+
+    trigger.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent clicks from bubbling
+        modal.style.transform = "scale(1)";
+        modal.style.pointerEvents = "auto"; // Enable interaction
+    });
+});
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = button.closest(".comment-modal"); // Find the modal container
+        const wrapper = modal?.parentElement;
+
+        if (wrapper?.classList.contains("comment-modal-wrapper")) {
+            wrapper.style.transform = "scale(0)";
+            wrapper.style.pointerEvents = "none"; // Disable interaction
+        }
+    });
+});
