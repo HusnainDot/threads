@@ -341,28 +341,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-const commentTriggers = document.querySelectorAll(".comment-trigger");
-const closeButtons = document.querySelectorAll(".close-comment-modal");
-
-commentTriggers.forEach(trigger => {
-    const modal = trigger.querySelector(".comment-modal-wrapper");
-
-    trigger.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent clicks from bubbling
-        modal.style.transform = "scale(1)";
-        modal.style.pointerEvents = "auto"; // Enable interaction
+document.addEventListener('DOMContentLoaded', () => {
+    // Open modal
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.comment-trigger');
+        if (trigger) {
+            const modal = trigger.querySelector('.comment-modal');
+            if (modal) {
+                modal.style.transform = 'scale(1)';
+            }
+        }
     });
-});
 
-closeButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const modal = button.closest(".comment-modal"); // Find the modal container
-        const wrapper = modal?.parentElement;
-
-        if (wrapper?.classList.contains("comment-modal-wrapper")) {
-            wrapper.style.transform = "scale(0)";
-            wrapper.style.pointerEvents = "none"; // Disable interaction
+    // Close modal
+    document.addEventListener('click', (e) => {
+        const closeBtn = e.target.closest('.close-comment-modal');
+        if (closeBtn) {
+            const modal = closeBtn.closest('.comment-modal');
+            if (modal) {
+         
+                modal.style.transform = 'scale(0)';
+            }
         }
     });
 });

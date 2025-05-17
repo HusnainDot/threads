@@ -51,7 +51,7 @@
     <!-- main content -->
 
 
-    <div class="card rounded-4 border-1 border-dark pb-5 post_main_content">
+    <div class="card rounded-4 border-1 border-dark pb-5 post_main_content w-100">
         <!-- post modal opner -->
         <div class="px-4 py-3  align-items-center justify-content-between post_modal_opner_3 d-none d-md-flex" style="cursor: pointer;">
             <div class="d-flex align-items-center gap-2 ">

@@ -215,17 +215,24 @@ h6 {
 
 
 
-.comment-modal-wrapper {
-  position: fixed !important;
-  top: 0 !important;
+.comment-modal {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh !important;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1050;
+  z-index: 9999999;
   transform: scale(0);
-  transform-origin: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  pointer-events: none;
+  transition: all 0.5s ease;
 }
 
+
+
+.close-comment-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
