@@ -181,17 +181,32 @@ foreach ($result as $item) {
                                                             </div>
                                                         </div>
                                                         <!--do comment  -->
-                                                        <form action="">
-                                                            <textarea name="post_comment" id="" rows="1" placeholder="Replay to <?php echo htmlspecialchars($item["u_name"]); ?> " class="w-100 text-white border-0" style="background: none; resize: none; outline: none;"></textarea>
+                                                        <form>
+                                                            <div class="position-relative">
+                                                                <input type="hidden" class="post_id" readonly name="post_id" value="<?php echo $item["post_id"] ?>">
+                                                                <textarea name="post_comment" id="" rows="1" placeholder=" Comment as <?php echo htmlspecialchars($_SESSION["users"]["username"]); ?> " class="w-100 text-white border-0 my-post-comments" style="background: none; resize: none; outline: none;"></textarea>
 
+
+                                                                <button type="button" class="position-absolute btn text-white post-comment-btn" style="right:40px; top:50%;transform: translateY(-50%); border: 1px solid rgb(54, 54, 53);">
+
+                                                                    <i class=" bi bi-send "></i>
+                                                                </button>
+                                                            </div>
                                                         </form>
-
 
                                                     </div>
 
 
                                                 </div>
-                                                <div class="my-3 w-100 " style="border-bottom: 0.1px solid rgb(121, 120, 120);"></div>
+                                                <div class=" my-3 w-100 " style=" border-bottom: 0.1px solid rgb(121, 120, 120);"></div>
+                                                <!-- all comments -->
+
+
+                                                <div class="all-comments" style="overflow-y: scroll;">
+
+
+                                                </div>
+
 
 
 

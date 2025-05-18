@@ -72,10 +72,57 @@ include './config.php';
     </div>
     <?php
     unset($_SESSION["posted"]);
-
-
     include '../components/bootstrap_js.php'
     ?>
+
+    <script>
+        $('.post-comment-btn').on("click", function() {
+            let post_id = $(this).closest('form').find('.post_id').val();
+
+            $.ajax({
+
+                url: './data_base/show-comments.php',
+                type: 'GET',
+                data: {
+                    post_id
+
+                },
+                success: function(respo) {
+                    $(".all-comments").css('hight','200px');
+                    $(".all-comments").html(respo);
+                }
+
+            });
+
+        });
+
+
+
+
+
+
+        $('.post-comment-btn').on("click", function() {
+            let post_id = $(this).closest('form').find('.post_id').val();
+            let myComment = $(this).closest("form").find(".my-post-comments").val();
+
+            $.ajax({
+
+                url: './data_base/add_comments.php',
+                type: 'POST',
+                data: {
+                    post_id,
+                    post_comment: myComment
+
+                },
+                success: function(respo) {
+                    console.log(respo);
+
+                }
+
+            });
+
+        });
+    </script>
 </body>
 
 </html>
