@@ -20,7 +20,7 @@ foreach ($result as $item) {
                 <div class="d-flex gap-2 align-items-center">
                     <h5 class="fs-6  text-capitalize">
 
-                        <!-- <?php echo htmlspecialchars($item["u_name"]); ?> -->
+                         <?php echo htmlspecialchars($item["u_name"]); ?>
                     </h5>
 
                     <!-- actual time when post was posted -->

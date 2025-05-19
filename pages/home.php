@@ -88,6 +88,8 @@ include './config.php';
 
                 },
                 success: function(respo) {
+                    console.log(respo);
+                    
                     $(".all-comments").html(respo);
                 }
 
