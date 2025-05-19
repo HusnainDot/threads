@@ -3,7 +3,7 @@ include "../config.php";
 
 $post_id = $_GET["post_id"];
 
-$showComments = "SELECT * FROM comments WHERE pc_id = $post_id";
+$showComments = "SELECT users.u_name,comments.comment FROM comments JOIN users ON comments.uc_id = users.id WHERE comments.pc_id = $post_id";
 
 $result = mysqli_query($connection, $showComments);
 
@@ -30,7 +30,7 @@ foreach ($result as $item) {
 
 
                 <p class="text-start">
-              
+              <?php  echo $item["comment"]?>
                 </p>
             </div>
         </div>

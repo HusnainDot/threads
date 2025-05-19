@@ -64,21 +64,19 @@ foreach ($result as $item) {
                             <!-- comments -->
 
                             <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill position-relative comment-trigger">
+                                <input type="hidden" class="comment-post_id" readonly name="post_id" value="<?php echo $item["post_id"] ?>">
                                 <i class="bi bi-chat text-white-50 fs-6"></i>
                                 <!-- comments count -->
                                 <span style="font-size: 12px;" class="text-white-50">651</span>
                                 <!-- comment modal -->
+
                                 <div class="comment-modal">
-                                    <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto comment-modal-wrapper py-4 min-vh-100 d-flex">
-                                        <div class="card rounded-4 border-1 border-dark mt-3 py-5 px-1 flex-grow-1 text-white bg-dark position-relative" style="background-color: #212529;">
+                                    <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto comment-modal-wrapper py-4 h-100  d-flex ">
+                                        <div class="card rounded-4 border-1 border-dark mt-3 py-5 px-1 flex-grow-1 text-white bg-dark h-100 position-relative comment-modal-srcoll" style=" background-color: #212529;">
                                             <!-- close modal btn  -->
                                             <button class="close-comment-modal position-absolute top-0 end-0 m-3"><i class="bi bi-x-lg"></i></button>
-                                            <div class="card-body text-center">
-                                                <!-- close modal card body -->
-
-
-
-                                                <!-- comment inner post  -->
+                                            <!-- comment inner post  -->
+                                            <div class="card-body text-center ">
 
                                                 <div class="d-flex align-items-start gap-2 ">
                                                     <!-- user dp -->
@@ -104,7 +102,7 @@ foreach ($result as $item) {
                                                             </div>
 
                                                             <!-- caption -->
-                                                            <p>
+                                                            <p class="text-start">
 
                                                                 <?php echo $item["caption"] ?>
 
@@ -112,7 +110,7 @@ foreach ($result as $item) {
 
                                                         </div>
                                                         <!-- user post img -->
-                                                        <div class="py-2 w-100">
+                                                        <div class="py-2 w-100 ">
                                                             <img src="../assets/posted_images/<?php echo $item["image"] ?>" alt="" class="rounded-2 user-posts w-100" style="object-fit: contain;">
                                                         </div>
 
@@ -134,7 +132,7 @@ foreach ($result as $item) {
                                                                 <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill position-relative comment-trigger">
                                                                     <i class="bi bi-chat text-white-50 fs-6"></i>
                                                                     <!-- comments count -->
-                                                                    <span style="font-size: 12px;" class="text-white-50">651</span>
+                                                                    <span style="font-size: 12px;" class="text-white-50 comments-count"></span>
                                                                     <!-- comment modal -->
 
                                                                 </div>
@@ -202,14 +200,10 @@ foreach ($result as $item) {
                                                 <!-- all comments -->
 
 
-                                                <div class="all-comments" style="overflow-y: scroll;">
+                                                <div class="all-comments">
 
 
                                                 </div>
-
-
-
-
                                             </div>
                                         </div>
                                     </div>

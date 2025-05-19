@@ -72,7 +72,7 @@ include './config.php';
     </div>
     <?php
     unset($_SESSION["posted"]);
-    include '../components/bootstrap_js.php'
+    include '../components/bootstrap_js.php';
     ?>
 
     <script>
@@ -88,14 +88,44 @@ include './config.php';
 
                 },
                 success: function(respo) {
-                    $(".all-comments").css('hight','200px');
                     $(".all-comments").html(respo);
                 }
 
             });
 
         });
+        // show comment 
 
+        $(document).on("click", ".comment-trigger", function() {
+            let post_id = $(this).find('.comment-post_id').val();
+
+            $.ajax({
+                url: './data_base/show-comments.php',
+                type: 'GET',
+                data: {
+                    post_id
+                },
+                success: function(respo) {
+             
+                    $(".all-comments").html(respo);
+                }
+            });
+        });
+        // show comment count
+        $(document).on("click", ".comment-trigger", function() {
+            let post_id = $(this).find('.comment-post_id').val();
+
+            $.ajax({
+                url: './data_base/show-commens-count.php',
+                type: 'GET',
+                data: {
+                    post_id
+                },
+                success: function(respo) {
+                    $(".comments-count").html(respo)
+                }
+            });
+        });
 
 
 
